@@ -1,0 +1,9 @@
+plan_id,issuer_id,plan_name,metal_level,coverage_year,active_flag
+10001TX0010001,10001,Harbor Point Bronze HMO,Bronze,2026,True
+10001TX0020001,10001,Harbor Point Silver PPO,Silver,2026,True
+10002FL0010001,10002,Cedar Valley Silver HMO,Silver,2026,True
+10002FL0020001,10002,Cedar Valley Gold PPO,Gold,2026,True
+10003GA0010001,10003,Summit Ridge Bronze HMO,Bronze,2026,True
+10003GA0020001,10003,Summit Ridge Gold PPO,Gold,2026,True
+10004NC0010001,10004,Riverbend Silver HMO,Silver,2026,True
+10004NC0020001,10004,Riverbend Platinum PPO,Platinum,2026,True

@@ -1,0 +1,27 @@
+# Secrets — never commit
+.env
+*.env
+credentials
+*.pem
+
+# Terraform state & local cache
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+!terraform.tfvars.example
+crash.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local database files
+*.mdf
+*.ldf
+*.bak
+
+# Generated data (only small samples get committed)
+data/generated/
+data/extracts/

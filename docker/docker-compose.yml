@@ -1,0 +1,18 @@
+# PostgreSQL = plan/issuer reference source system (synthetic data)
+services:
+  postgres:
+    image: postgres:17
+    container_name: mep-postgres
+    environment:
+      POSTGRES_DB: plan_reference
+      POSTGRES_USER: ${POSTGRES_USER}          # read from .env (not committed)
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # read from .env (not committed)
+    ports:
+      - "127.0.0.1:5432:5432"   # reachable from THIS laptop only, not the network
+    volumes:
+      - pgdata:/var/lib/postgresql/data   # database files survive restarts
+      - ../data/sample:/data/sample:ro    # our CSVs, read-only
+      - ../sql/postgres:/sql:ro           # our SQL scripts, read-only
+
+volumes:
+  pgdata:

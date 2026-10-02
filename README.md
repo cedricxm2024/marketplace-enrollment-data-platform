@@ -1,6 +1,6 @@
 # Marketplace Enrollment Data Platform
 
-I built a scaled-down, enterprise-style Marketplace (FFM-style) enrollment data platform using **entirely synthetic data**. No real people, PHI, PII, or employer/CMS information is used anywhere.
+I built a scaled-down, enterprise-style Marketplace (FFM-style) enrollment data platform using **entirely synthetic data**. No real people, PHI, PII, or employer.
 
 ## Business Problem
 

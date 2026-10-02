@@ -48,6 +48,14 @@ data "aws_iam_policy_document" "glue_s3" {
       "${aws_s3_bucket.datalake.arn}/glue-temp/*",
     ]
   }
+
+  # Spark/Hadoop writes empty "<folder>_$folder$" marker objects beside output folders.
+  # Allow ONLY those markers, not the whole bucket (found via a failed job run).
+  statement {
+    sid       = "SparkFolderMarkers"
+    actions   = ["s3:PutObject", "s3:DeleteObject"]
+    resources = ["${aws_s3_bucket.datalake.arn}/*_$folder$"]
+  }
 }
 
 resource "aws_iam_role_policy" "glue_s3" {
